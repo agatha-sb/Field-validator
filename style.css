@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
-  --success-color: #2ecc71;
-  --error-color: #e74c3c;
+  --success-color: #ebffeb;
+  --error-color: #fce7e7;
 }
 
 * {
@@ -76,21 +76,27 @@ h2  {
 }
 
 .form-control.success input {
-  border-color: var(--success-color);
+  background: var(--success-color);
 }
 
 .form-control.error input {
-  border-color: var(--error-color);
+  background: var(--error-color);
 }
 
 .form-control small {
-  color: var(--error-color);
-  font-size: 0.75em;
+  color: rgb(243, 59, 59);
+  font-size: 0.75rem;
   position: absolute;
   bottom: 0;
   left: 8px;
   margin-top: 13px;
   visibility: hidden;
+}
+
+@media only screen and (max-width: 390px) {
+  .form-control small {
+    font-size: 2.6923vw;
+  }
 }
 
 .form-control.error small {
